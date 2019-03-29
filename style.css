@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Asap, sans-serif;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 30px;
+	align-items: center;
+}
+
+.logo {
+	margin-bottom: -8px;
+}
+
+.logo img {
+	width: 300px;
+	
+}
+
+
+.menu-list {
+	display: flex;
+
+}
+
+.menu-list li {
+	display: inline-block;
+	vertical-align: center;
+	margin-left: 25px;
+}
+
+.menu-list li>a {
+	text-decoration: none;
+	color: black;
+}
