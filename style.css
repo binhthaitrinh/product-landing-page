@@ -12,9 +12,14 @@ body {
 
 header {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 20px 30px;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	min-height: 75px;
+	background-color: #eee;
+	width: 100%;
 }
 
 .logo img {
@@ -35,11 +40,38 @@ header {
 	color: black;
 }
 
+@media screen and (max-width: 650px) {
+	header {
+		flex-wrap: wrap;
+	}
+	.menu-list {
+		display: flex;
+		width: 100%;
+		margin-top: 10px;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 0 50px;
+	}
+	.menu-list li {
+		padding-bottom: 5px;
+	}
+}
+
 /*******************************************************************
 // TOP BODY
 ******************************************************************/
 .main-content {
 	margin: 10px auto;
+	max-width: 1000px;
+	width: 100%;
+	margin-top: 80px;
+}
+
+@media screen and (max-width: 650px) {
+	.main-content {
+		margin-top: 150px;
+	}
 }
 
 
@@ -88,4 +120,80 @@ header {
 }
 .icon {
 	color: orange;
+}
+
+/*******************************************************************
+// PRICING-CONTENT
+******************************************************************/
+.pricing-content {
+	display: flex;
+	margin: 20px;
+	justify-content: center;
+}
+
+#tenor, #bass, #valve {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 20px;
+	width: calc(100%/3);
+	margin: 10px;
+}
+
+.pricing-header {
+	background-color: #dcdcdc;
+	margin: -20px;
+	margin-bottom: 15px;
+	padding: 10px;
+	font-weight: 600;
+} 
+
+.pricing-text {
+	margin-top: 15px;
+}
+
+.pricing-text li {
+	padding-bottom: 8px;
+}
+
+.pricing-button {
+	margin: 8px auto;
+	background-color: orange;
+	font-size: 16px;
+	padding: 10px;
+	font-weight: 400;
+	border: 0px solid;
+	border-radius: 5px;
+}
+footer {
+	text-align: right;
+	background-color: #dcdcdc;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+footer ul {
+	margin-bottom: 6px;
+}
+
+footer li {
+	display: inline;
+	padding: 15px;
+	padding-right: 20px;
+}
+
+footer li>a {
+	text-decoration: none;
+	color: black;
+}
+
+@media screen and (max-width: 800px) {
+	.pricing-content {
+		flex-direction: column;
+	}
+	#tenor, #bass, #valve {
+		max-width: 300px;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
 }
